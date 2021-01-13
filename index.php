@@ -39,10 +39,7 @@
 				break;
 			case 'daftar':
 				include "halaman/daftar.php";
-				break;
-			case 'tutorial':
-				include "halaman/tutorial.php";
-				break;			
+				break;		
 			default:
 				echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
 				break;
