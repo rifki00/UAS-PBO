@@ -1,19 +1,27 @@
+# Dibuat pada:
+12 Januari 2021
+
 # UAS-PBO
 Matakuliah PBO
-Upgrade fiture
+Upgrade fitur
 
-#Fungsi class:
+# Fungsi class:
 -fungsi login
 -fungsi Register
 -Fungsi Curl
 
-#MYSQL Tabel
+# MYSQL Tabel
 -pengguna
 -log_login
 
-Fitur dasar:
+Fitur Yang di harapkan:
+- [x] Login
+- [X] Daftar
+- [ ] Menu user
+- [ ] Menu admin
+- [ ] Reedem Code
+- [ ] lihat log login
+- [ ] ganti password
+- [ ] Web shop (semoga tercapai)
 
--login
--register
-
-Still Devolep progress
+:+1: Progress pembuatan berjalan sejak 12 januari 2021, Tetap santuy walaupun mepet :shipit:
