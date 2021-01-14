@@ -1,28 +1,28 @@
 <?php
-  if(isset($_POST['login']))
+  if(isset($_POST['daftar']))
   {
 
-    if(empty($_POST['username']))
-      echo "form username tidak boleh kosong!";
+    if(empty($_POST['name']))
+      echo "<script>alert('Form username tidak boleh kosong!');</script><script>window.history.back()</script>";
     else if(empty($_POST['email']))
-     echo "form email tidak boleh kosong";
+      echo "<script>alert('Form E-mail tidak boleh kosong!');</script><script>window.history.back()</script>";
     else if(empty($_POST['password']))
-     echo "form password tidak boleh kosong";
+     echo "<script>alert('Form password tidak boleh kosong!');</script><script>window.history.back()</script>";
     else if(empty($_POST['repassword']))
-     echo "form repassword tidak boleh kosong";
+     echo "<script>alert('Form repassword tidak boleh kosong!');</script><script>window.history.back()</script>";
     else if(empty($_POST['jeniskelamin']))
-     echo "pilih salah satu jenis kelamin tidak boleh kosong";
+     echo "<script>alert('Form jenis kelamin wajib di isi!');</script><script>window.history.back()</script>";
     else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
-     echo "format alamat email harus sesuai";
+     echo "<script>alert('Format email tidak Valid! ');</script><script>window.history.back()</script>";
     else 
     {
-      $username = $_POST['username'];
+      $username = $_POST['name'];
       $email    = $_POST['email'];
       $password = $_POST['password'];
       $repassword = $_POST['repassword'];
       $jeniskelamin = $_POST['jeniskelamin'];
 
-      $pengguna->Login($userlogin, $password);
+      $pengguna->Daftar($username, $email, $password, $repassword, $jeniskelamin);
     }
 
   }
@@ -48,18 +48,18 @@
               <h4 class="card-title">Daftar</h4>
               <form method="POST" class="uas-game-validation" novalidate="">
                 <div class="form-group">
-                  <label for="name">Name</label>
-                  <input id="name" type="text" class="form-control" name="name" required autofocus>
+                  <label for="name">username</label>
+                  <input id="name" type="text" pattern="[A-Za-z0-9_]{0,100}" class="form-control" name="name" required autofocus>
                   <div class="invalid-feedback">
-                    What's your name?
+                    Form Tidak boleh kosong atau tidak boleh menggunakan simbol
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="email">E-Mail Address</label>
+                  <label for="email">Alamat E-Mail</label>
                   <input id="email" type="email" class="form-control" name="email" required>
                   <div class="invalid-feedback">
-                    Your email is invalid
+                    Alamat E-mail tidak valid!
                   </div>
                 </div>
 
@@ -67,22 +67,30 @@
                   <label for="password">Password</label>
                   <input id="password" type="password" class="form-control" name="password" required data-eye>
                   <div class="invalid-feedback">
-                    Password is required
+                    Form password tidak boleh kosong
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <div class="custom-checkbox custom-control">
-                    <input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
-                    <label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
-                    <div class="invalid-feedback">
-                      You must agree with our Terms and Conditions
-                    </div>
+                  <label for="password">Re-Type Password</label>
+                  <input id="repassword" type="password" class="form-control" name="repassword" required data-eye>
+                  <div class="invalid-feedback">
+                    Form Re-Password tidak boleh kosong
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label for="jeniskelamin">Jenis Kelamin: </label>
+                  <input id="jeniskelamin" type="radio" name="jeniskelamin" id="jeniskelaminpria" value="1">Laki - Laki
+                  <input id="jeniskelamin" type="radio" name="jeniskelamin" id="jeniskelaminwanita" value="2">Perempuan       
+                  <div class="invalid-feedback">
+                    Jenis Kelamin wajib di pilih 
+                  </div>
+                </div>
+
+
                 <div class="form-group m-0">
-                  <button type="submit" class="btn btn-primary btn-block">
+                  <button type="submit" name="daftar" value="daftar" class="btn btn-primary btn-block">
                     Daftar
                   </button>
                 </div>

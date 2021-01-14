@@ -38,10 +38,10 @@
               <h4 class="card-title">Login</h4>
               <form method="POST" class="my-login-validation" novalidate="">
                 <div class="form-group">
-                  <label for="userlogin">Alamat E-mail atau nama Karakter</label>
+                  <label for="userlogin">Alamat E-mail atau username</label>
                   <input id="userlogin" type="text" class="form-control" name="userlogin" value="" required autofocus>
                   <div class="invalid-feedback">
-                    Form E-mail / nama Karakter tidakboleh kosong!
+                    Form E-mail / username tidakboleh kosong!
                   </div>
                 </div>
 

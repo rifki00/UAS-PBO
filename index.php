@@ -6,13 +6,9 @@
 
 */
 
-
+  date_default_timezone_set("Asia/Jakarta");
   require_once 'class/class.php';
   $pengguna = new Pengguna();
-
-
-
-
 
 ?>
 
@@ -41,7 +37,8 @@
 				include "halaman/daftar.php";
 				break;		
 			default:
-				echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
+				echo "<center><h3>Maaf. Halaman tidak di temukan! akan di alihkan ke halaman utama</h3></center><meta http-equiv='refresh' content='5; url=".$pengguna->Urlwebnya()."index.php'>";
+				
 				break;
 		}
 	}else{
