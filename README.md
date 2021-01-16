@@ -7,12 +7,16 @@ https://github.com/puikinsh/concept
 
 # UAS-PBO
 Matakuliah PBO
-Upgrade fitur
 
 # Fungsi class:
--fungsi login
--fungsi Register
--Fungsi Curl
+- Fungsi login
+- Fungsi Register
+- Fungsi Curl
+- Fungsi CreateCode
+- Fungsi ReedemCode
+- Fungsi Management Account
+- Fungsi Ganti Password
+- Fungsi Getdatafrom tabel
 
 # MYSQL Tabel
 -pengguna
