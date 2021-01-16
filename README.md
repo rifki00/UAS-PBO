@@ -16,7 +16,7 @@ Matakuliah PBO
 - Fungsi ReedemCode
 - Fungsi Management Account
 - Fungsi Ganti Password
-- Fungsi Getdatafrom tabel
+- Fungsi Getdata From DB
 
 # MYSQL Tabel
 - pengguna
