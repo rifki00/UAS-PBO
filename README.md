@@ -19,8 +19,9 @@ Matakuliah PBO
 - Fungsi Getdatafrom tabel
 
 # MYSQL Tabel
--pengguna
--log_login
+- pengguna
+- log_login
+- voucher
 
 Fitur Yang di harapkan:
 - [x] Login (user/ admin)
